@@ -1,0 +1,21 @@
+
+# Define your functions here
+def get_user_values(v):
+    input_list = []
+    for i in range(v):
+        a = int(input())
+        input_list.append(a)
+    return input_list
+def ints_less_than_or_equal_to_threshold(user_values, upper_threshold):
+    less_than = []
+    for values in user_values:
+        if values <= upper_threshold:
+            less_than.append(values)
+    return less_than
+if __name__ == '__main__':
+    lens = int(input())
+    b = get_user_values(lens)
+    threshold = int(input())
+    c = ints_less_than_or_equal_to_threshold(b, threshold)
+    for i in c:
+        print(i)
